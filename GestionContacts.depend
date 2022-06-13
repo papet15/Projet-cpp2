@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1655116197 source:c:\users\asus\desktop\projet-cpp\contacts.cpp
+	"contacts.h"
+
+1655115276 c:\users\asus\desktop\projet-cpp\contacts.h
+	<iostream>
+
+1655116197 source:c:\users\asus\desktop\projet-cpp\main.cpp
+	<iostream>
+	"contacts.h"
+	"prives.h"
+	"professionnels.h"
+
+1655116244 source:c:\users\asus\desktop\projet-cpp\prives.cpp
+	"prives.h"
+
+1655116229 c:\users\asus\desktop\projet-cpp\prives.h
+	"contacts.h"
+
+1655115537 source:c:\users\asus\desktop\projet-cpp\professionnels.cpp
+	"professionnels.h"
+
+1655115562 c:\users\asus\desktop\projet-cpp\professionnels.h
+	"contacts.h"
+

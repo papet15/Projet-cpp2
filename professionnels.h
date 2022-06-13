@@ -2,14 +2,17 @@
 #define PROFESSIONNELS_H
 
 
-class Professionnels
+#include "contacts.h"
+
+
+class Professionnels : public Contacts
 {
     public:
-        Professionnels();
+        Professionnels(int=0, string="", string="",string="",string="",string="",string="");
         virtual ~Professionnels();
 
-        string GetNomEntreprise[50]() { return NomEntreprise[50]; }
-        void SetNomEntreprise[50](string val) { NomEntreprise[50] = val; }
+        string GetNomEntreprise() { return NomEntreprise; }
+        void SetNomEntreprise(string val) { NomEntreprise = val; }
         string GetAdresseEntreprise() { return AdresseEntreprise; }
         void SetAdresseEntreprise(string val) { AdresseEntreprise = val; }
         string GetMailEntreprise() { return MailEntreprise; }
@@ -18,7 +21,7 @@ class Professionnels
     protected:
 
     private:
-        string NomEntreprise[50];
+        string NomEntreprise;
         string AdresseEntreprise;
         string MailEntreprise;
 };

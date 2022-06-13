@@ -1,35 +1,42 @@
 #ifndef CONTACTS_H
 #define CONTACTS_H
 
+#include <iostream>
+
+
+
+using namespace std;
 
 class Contacts
 {
 
     private:
         int Identifiant;
-        string Nom[30];
-        string Prenom[30];
-        char Sexe;
+        string Nom;
+        string Prenom;
+        string Sexe;
 
     public:
-        Contacts();
+        Contacts(int=0, string="" , string="" ,string="");
         ~Contacts();
 
         int GetIdentifiant() { return Identifiant; }
 
         void SetIdentifiant(int val) { Identifiant = val; }
 
-        string GetNom[30]() { return Nom[30]; }
+        string GetNom() { return Nom; }
 
-        void SetNom[30](string val) { Nom[30] = val; }
+        void SetNom(string val) { Nom = val; }
 
-        string GetPrenom[30]() { return Prenom[30]; }
+        string GetPrenom() { return Prenom; }
 
-        void SetPrenom[30](string val) { Prenom[30] = val; }
+        void SetPrenom(string val) { Prenom = val; }
 
-        char GetSexe() { return Sexe; }
+        string GetSexe() { return Sexe; }
 
-        void SetSexe(char val) { Sexe = val; }
+        void SetSexe(string val) { Sexe = val; }
+
+        void affiche();
 
 };
 

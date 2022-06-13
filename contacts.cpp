@@ -1,11 +1,29 @@
 #include "contacts.h"
 
-Contacts::Contacts()
+Contacts::Contacts(int i, string n, string p, string s)
 {
-    //ctor
+    this->SetIdentifiant(i);
+    this->SetNom(n);
+    this->SetNom(p);
+    this->SetSexe(s);
+
 }
 
 Contacts::~Contacts()
 {
-    //dtor
+    cout << "Destruction de Contacts : " << this->GetIdentifiant() << endl;
+}
+
+
+
+void Contacts::affiche()
+{
+    cout << endl << "Identifiant : " << this->GetIdentifiant();
+    cout << endl << "Nom : " << this->GetNom() ;
+    cout << endl << "Prenom : " << this->GetPrenom() ;
+    cout << endl << "Sexe : " << this->GetSexe()<< endl ;
+
+
+
+
 }
