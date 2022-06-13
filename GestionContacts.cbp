@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="MonException.cpp" />
+		<Unit filename="MonException.h" />
 		<Unit filename="contacts.cpp" />
 		<Unit filename="contacts.h" />
 		<Unit filename="main.cpp" />

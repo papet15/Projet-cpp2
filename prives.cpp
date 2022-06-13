@@ -1,6 +1,6 @@
 #include "prives.h"
 
-Prives::Prives(int i, string n, string p, string s, string dn, string ap)
+Prives::Prives(int i, string n, string p, char s, string dn, string ap)
         :Contacts(i,n,p,s)
 {
     this->SetAdressePostale(ap);
@@ -12,12 +12,9 @@ Prives::~Prives()
     cout << endl<< "Destruction de Prives"  << endl;
 }
 
-void Prives::affiche2()
+void Prives::affiche()
 {
-    cout << endl << "Identifiant : " << this->GetIdentifiant();
-    cout << endl << "Nom : " << this->GetNom() ;
-    cout << endl << "Prenom : " << this->GetPrenom() ;
-    cout << endl << "Sexe : " << this->GetSexe();
+    Contacts::affiche();
     cout << endl << "Adresse postale : " << this->GetAdressePostale() ;
     cout << endl << "Date Naissance : " << this->GetDateNaissance()<< endl;
 

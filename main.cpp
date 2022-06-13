@@ -2,19 +2,82 @@
 #include "contacts.h"
 #include "prives.h"
 #include "professionnels.h"
+#include "MonException.h"
 
 using namespace std;
 
 int main()
 {
-    Contacts c(1000, "TOTO", "Tata", "F");
-    c.affiche();
+    cout << "Nom minuscules, prenom avec majuscule mal placee : "<<endl ;
+    try
+    {
+        Contacts p = Contacts(10,"Laurent","daNielle",'F');
+        p.affiche();
+
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
 
 
-    Prives p(500, "DUPONT", "Remi", "M", "01/01/1990", "75015");
-    p.affiche2();
+    cout << "Nom trop long : "<<endl ;
+    try
+    {
+        Contacts p = Contacts(10,"Laurentttttttttttttttttttttttttttttttttttttttttttttttttttttttt","Danielle",'F');
+        p.affiche();
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
+    cout << "Prenom trop long : "<<endl;
+    try
+    {
+        Contacts p = Contacts(10,"LAURENT","dAnielleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",'F');
+        p.affiche();
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
+    cout << "Sexe different de F ou M : "<<endl;
+    try
+    {
+        Contacts p = Contacts(10,"LAURENT","Danielle",'Z');
+        p.affiche();
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
 
-    Professionnels p2(1000, "ALPHA", "Beta", "F", "Zara", "rue des olivers", "test@hotmail.fr");
-    p2.affiche();
+    cout << "Nom entreprise trop long sans majuscules : "<<endl;
+    try
+    {
+        Professionnels p = Professionnels(15, "Ducobu", "Bertrand", 'M', "Zaraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "rue des olivers", "test@hotmail.fr");
+        p.affiche();
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
+
+
+    cout << "Nom entreprise sans majuscules : ";
+    try
+    {
+        Professionnels p = Professionnels(15, "Ducobu", "Bertrand", 'M', "zara", "rue des olivers", "test@hotmail.fr");
+        p.affiche();
+    }
+    catch(const MonException& ex)
+    {
+        cout << ex.what() << endl;
+    }
+
+
+    return 0;
+
+
 
 }

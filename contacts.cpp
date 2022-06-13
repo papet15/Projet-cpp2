@@ -1,17 +1,17 @@
 #include "contacts.h"
 
-Contacts::Contacts(int i, string n, string p, string s)
+Contacts::Contacts(int i, string n, string p, char s)
 {
     this->SetIdentifiant(i);
     this->SetNom(n);
-    this->SetNom(p);
+    this->SetPrenom(p);
     this->SetSexe(s);
 
 }
 
 Contacts::~Contacts()
 {
-    cout << "Destruction de Contacts : " << this->GetIdentifiant() << endl;
+
 }
 
 
