@@ -4,7 +4,6 @@
 #include <iostream>
 #include <algorithm>
 
-
 using namespace std;
 
 class Contacts
@@ -44,6 +43,7 @@ class Contacts
                 transform(begin(val), end(val),begin(val), ::tolower);
                 val[0] = toupper(val[0]);
                 Prenom=val;
+
             }else throw MonException(Erreurs::ERR_PRE);}
 
         char GetSexe() { return Sexe; }

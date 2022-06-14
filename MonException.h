@@ -5,7 +5,7 @@
 
 using namespace std;
 
-enum class Erreurs {ERR_NOMENTREPRISE, ERR_NOM, ERR_PRE, ERR_SEXE, ERR_AUTRES};
+enum class Erreurs {ERR_NOMENTREPRISE, ERR_MAIL, ERR_NOM, ERR_PRE, ERR_SEXE, ERR_AUTRES};
 
 class MonException: exception
 {

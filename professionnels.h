@@ -8,7 +8,7 @@
 class Professionnels : public Contacts
 {
     public:
-        Professionnels(int=0, string="", string="",char='O',string="",string="",string="");
+        Professionnels(int=0, string="", string="",char='O',string="",string="", string="", string="", string="", string="",string="");
         virtual ~Professionnels();
 
         string GetNomEntreprise() { return NomEntreprise; }
@@ -20,10 +20,43 @@ class Professionnels : public Contacts
             NomEntreprise=val;
             }else throw MonException(Erreurs::ERR_NOMENTREPRISE);
         }
-        string GetAdresseEntreprise() { return AdresseEntreprise; }
-        void SetAdresseEntreprise(string val) { AdresseEntreprise = val; }
+
         string GetMailEntreprise() { return MailEntreprise; }
-        void SetMailEntreprise(string val) { MailEntreprise = val; }
+
+        void SetMailEntreprise(string val)
+        {
+            string val2 = val;
+            string verif_mail = "@";
+            if (val.find(verif_mail) != std::string::npos)
+                {
+                val.replace(val.find("@"), verif_mail.length(), "test");
+                if (val.find(verif_mail) == std::string::npos)
+                {
+                MailEntreprise = val2;
+                }else
+            throw MonException(Erreurs::ERR_MAIL);
+            }else
+            throw MonException(Erreurs::ERR_MAIL);
+        }
+
+
+
+        string GetNumero() { return Numero; }
+        void SetNumero(string val) { Numero = val; }
+
+         string GetRue() { return Rue; }
+        void SetRue(string val) { Rue = val; }
+
+         string GetComplement() { return Complement; }
+        void SetComplement(string val) { Complement = val; }
+
+         string GetCodepostal() { return Codepostal; }
+        void SetCodepostal(string val) { Codepostal = val; }
+
+         string GetVille() { return Ville; }
+        void SetVille(string val) { Ville = val; }
+
+
 
         void affiche();
 
@@ -31,7 +64,11 @@ class Professionnels : public Contacts
 
     private:
         string NomEntreprise;
-        string AdresseEntreprise;
+        string Numero;
+        string Rue;
+        string Complement;
+        string Codepostal;
+        string Ville;
         string MailEntreprise;
 };
 

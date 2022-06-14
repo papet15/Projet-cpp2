@@ -1,9 +1,13 @@
 #include "prives.h"
 
-Prives::Prives(int i, string n, string p, char s, string dn, string ap)
+Prives::Prives(int i, string n, string p, char s, string dn, string na, string r, string c, string co, string v)
         :Contacts(i,n,p,s)
 {
-    this->SetAdressePostale(ap);
+    this->SetNumero(na);
+    this->SetRue(r);
+    this->SetComplement(c);
+    this->SetCodepostal(co);
+    this->SetVille(v);
     this->SetDateNaissance(dn);
 }
 
@@ -15,8 +19,8 @@ Prives::~Prives()
 void Prives::affiche()
 {
     Contacts::affiche();
-    cout << endl << "Adresse postale : " << this->GetAdressePostale() ;
-    cout << endl << "Date Naissance : " << this->GetDateNaissance()<< endl;
+    cout << "Adresse de l'entreprise : " << GetNumero() << ", " << GetRue() << " " << GetComplement() << " " << GetCodepostal() << " " << GetVille() << endl;
+    cout << "Date Naissance : " << this->GetDateNaissance()<< endl;
 
 
 

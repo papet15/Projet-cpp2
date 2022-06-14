@@ -23,6 +23,9 @@ string MonException::Getmessage() const
         case Erreurs::ERR_NOMENTREPRISE:
             message = "Err longueur nom entreprise";
             break;
+        case Erreurs::ERR_MAIL:
+            message = "Err @ mail";
+            break;
         case Erreurs::ERR_NOM:
             message = "Err longueur nom";
             break;
