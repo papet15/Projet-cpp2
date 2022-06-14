@@ -20,7 +20,7 @@ void Prives::affiche()
 {
     Contacts::affiche();
     cout << "Adresse de l'entreprise : " << GetNumero() << ", " << GetRue() << " " << GetComplement() << " " << GetCodepostal() << " " << GetVille() << endl;
-    cout << "Date Naissance : " << this->GetDateNaissance()<< endl;
+    cout << "Date Naissance : " << this->GetDateNaissance();
 
 
 

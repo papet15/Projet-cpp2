@@ -14,7 +14,7 @@ Professionnels::Professionnels(int i, string n, string p, char s, string ne, str
 
 Professionnels::~Professionnels()
 {
-    cout << endl << "Destruction de Professionnels : " << this->GetIdentifiant() << endl;
+    cout << endl << "Destruction de Professionnels : " << this->GetIdentifiant() << endl<< endl;
 
 }
 
@@ -24,5 +24,5 @@ void Professionnels::affiche()
     Contacts::affiche();
     cout << "Nom Entreprise : " << this->GetNomEntreprise() << endl;
     cout << "Adresse de l'entreprise : " << GetNumero() << ", " << GetRue() << " " << GetComplement() << " " << GetCodepostal() << " " << GetVille() << endl;
-    cout << "Mail Entreprise : " << this->GetMailEntreprise()<< endl;
+    cout << "Mail Entreprise : " << this->GetMailEntreprise();
 }
